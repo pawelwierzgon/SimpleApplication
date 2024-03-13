@@ -11,5 +11,9 @@ cd SimpleApplication/
 # Install all dependencies
 npm install
 
+# Save private key and the certificate
+echo $PRIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
+
 # Start the app using pm2
 pm2 start ./bin/www --name simple_app
