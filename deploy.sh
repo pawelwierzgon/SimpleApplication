@@ -15,5 +15,8 @@ npm install
 echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 
+# Kill all running processes
+pm2 kill
+
 # Start the app using pm2
 pm2 start ./bin/www --name simple_app
